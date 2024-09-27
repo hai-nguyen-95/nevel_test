@@ -13,6 +13,7 @@ export { default as TimelineBlack } from "./timeline-black.svg";
 export { default as LinkedinSolidBlue } from "./linkedin-solid-blue.svg";
 export { default as TwitterSolidBlue } from "./twitter-solid-blue.svg";
 export { default as YoutubeSolidRed } from "./youtube-solid-red.svg";
+export { default as LogoGray } from "./logo-gray.svg";
 
 export { default as DoubleRoundWhite } from "./double-round-white.svg";
 export { default as MusicNoteWhite } from "./music-note-white.svg";

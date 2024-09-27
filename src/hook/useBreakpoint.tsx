@@ -19,34 +19,34 @@ const useBreakpoint = () => {
     height: 0,
   });
 
-  if (!window) return;
+  if (typeof window != "undefined") {
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
 
-  const handleResize = () => {
-    setWindowSize({
-      width: window.innerWidth,
-      height: window.innerHeight,
-    });
-  };
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEffect(() => {
+      window.addEventListener("resize", handleResize);
+      handleResize();
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    let n = 0;
-    const temp: any = { ...breakpoint };
-    while (!!sizeName[n + 1]) {
-      if (sizeValue[n] <= windowSize.width) {
-        temp[sizeName[n]] = true;
-      } else {
-        temp[sizeName[n]] = false;
+      let n = 0;
+      const temp: any = { ...breakpoint };
+      while (!!sizeName[n + 1]) {
+        if (sizeValue[n] <= windowSize.width) {
+          temp[sizeName[n]] = true;
+        } else {
+          temp[sizeName[n]] = false;
+        }
+        n += 1;
       }
-      n += 1;
-    }
 
-    setBreakPoint(temp)
-    return () => window.removeEventListener("resize", handleResize);
-  }, [windowSize.width]);
+      setBreakPoint(temp);
+      return () => window.removeEventListener("resize", handleResize);
+    }, [windowSize.width]);
+  }
   return breakpoint;
 };
 

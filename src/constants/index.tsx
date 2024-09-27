@@ -28,16 +28,6 @@ export const POSTER = [
   }
 ]
 
-export const ROUTER_LIST = [
-  "HOME",
-  "GAMES",
-  "NEWS",
-  "MATH",
-  "COMPANY",
-  "EVENTS",
-  "PARTNERS",
-];
-
 import {
   HomeBlack,
   AllGameBlack,
@@ -76,3 +66,34 @@ export const FILTER = {
   name: "Filter",
   src: FilterBlack.src,
 };
+
+export const ROUTER_LIST = [
+  "Home",
+  "Games",
+  "News",
+  "Math",
+  "Company",
+  "Events",
+  "Partners",
+];
+
+export const ABOUT_US = [
+  "Licensing",
+  "Certification",
+  "Responsible Gaming",
+  "Exhibitions",
+  "Copyright Protection",
+  "Privacy Policy",
+];
+
+export const EVENTS = [
+  "PG ICE 2017",
+  "PG ICE 2018",
+  "PG ICE 2019",
+  "About ICE",
+];
+
+export const OUR_PARTNERS = [
+  "Relax Gaming",
+  "Leander Games",
+];

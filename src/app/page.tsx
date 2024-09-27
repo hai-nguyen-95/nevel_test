@@ -7,6 +7,7 @@ import { POSTER } from "@/constants";
 import CarouselPoster from "@/components/carousel-poster";
 import Topbar from "@/components/topbar";
 import Sidebar from "@/components/sidebar";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -15,9 +16,9 @@ export default function Home() {
         <Topbar />
         <main>
           <CarouselPoster data={POSTER} />
-          <Sidebar/>
+          <Sidebar />
         </main>
-        <footer>footer</footer>
+        <Footer />
       </ChakraProvider>
     </div>
   );

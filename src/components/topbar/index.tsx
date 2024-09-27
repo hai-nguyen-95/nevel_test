@@ -61,6 +61,7 @@ const Topbar = () => {
                     opacity: 1,
                     borderBottom: "1px solid #fff",
                   }}
+                  textTransform={"uppercase"}
                   height={"72px"}
                 >
                   {item}
