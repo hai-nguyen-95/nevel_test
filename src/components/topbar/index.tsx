@@ -19,7 +19,7 @@ const Topbar = () => {
   return (
     <Box
       width={"full"}
-      position={"fixed"}
+      position={"absolute"}
       top={0}
       left={0}
       background={{
@@ -74,6 +74,7 @@ const Topbar = () => {
             <MenuButton
               as={Button}
               padding={0}
+              borderColor={"transparent"}
               rightIcon={<Image src={MenuWhite.src} alt="menu" />}
             />
             <MenuList background={"rgba(0, 0, 0, 0.5)"} border={"unset"}>

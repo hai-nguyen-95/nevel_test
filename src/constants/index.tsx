@@ -1,32 +1,41 @@
-import { ChickyRun, FutebolFever, MahjongWays, WildBandito, TreeOfFortune } from "@/assets/img";
+import {
+  ChickyRun,
+  FutebolFever,
+  MahjongWays,
+  WildBandito,
+  TreeOfFortune,
+  MahjongWaysSquare,
+  WildBanditoSquare,
+  TreeOfFortuneSquare
+} from "@/assets/img";
 
 export const POSTER = [
   {
     id: 1,
     name: "Chicky Run",
-    src: ChickyRun.src
+    src: ChickyRun.src,
   },
   {
     id: 2,
     name: "Futebol Fever",
-    src: FutebolFever.src
+    src: FutebolFever.src,
   },
   {
     id: 3,
     name: "Mahjong Ways",
-    src: MahjongWays.src
+    src: MahjongWays.src,
   },
   {
     id: 4,
     name: "Wild Bandito",
-    src: WildBandito.src
+    src: WildBandito.src,
   },
   {
     id: 5,
     name: "Tree of Fortune",
-    src: TreeOfFortune.src
-  }
-]
+    src: TreeOfFortune.src,
+  },
+];
 
 import {
   HomeBlack,
@@ -93,7 +102,34 @@ export const EVENTS = [
   "About ICE",
 ];
 
-export const OUR_PARTNERS = [
-  "Relax Gaming",
-  "Leander Games",
+export const OUR_PARTNERS = ["Relax Gaming", "Leander Games"];
+
+export const HOT_GAME = [
+  {
+    id: 1,
+    name: "Mahjong Ways",
+    desc: "4TECH™ has just launched their very first Mahjong inspired slot machine game",
+    src: MahjongWays.src,
+    squareSrc: MahjongWaysSquare.src,
+  },
+  {
+    id: 2,
+    name: "Wild Bandito",
+    desc: "Águila which means ‘The Eagle’ is a three-person Mexican bandit team that is activity",
+    src: WildBandito.src,
+    squareSrc: WildBanditoSquare.src,
+  },
 ];
+
+export const RELEASE_DATE_FILTER = ["AZ", "ZA"];
+
+export const HOT_GAME_MB = {
+  id: 1,
+  name: "Tree Of Fortune",
+  desc: "Legend has it that a farmer was granted a seed from a deity.",
+  src: TreeOfFortune.src,
+  squareSrc: TreeOfFortuneSquare.src,
+  volatility: "Medium",
+  rpt: "95.01",
+  maximumWin: "5000",
+};

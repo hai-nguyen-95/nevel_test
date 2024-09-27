@@ -21,7 +21,11 @@ interface DataProps {
 
 const CarouselPoster = ({ data }: { data: DataProps[] }) => {
   return (
-    <Box width={"full"} backgroundColor={"#03827E"}>
+    <Box
+      mb={{ base: "unset", md: "80px" }}
+      width={"full"}
+      backgroundColor={"#03827E"}
+    >
       <Swiper
         modules={[Pagination, Navigation]}
         pagination={{
@@ -60,6 +64,7 @@ const CarouselPoster = ({ data }: { data: DataProps[] }) => {
                   left={"calc(50% - 70px)"}
                   fontSize={"14px"}
                   color={"#fff"}
+                  borderColor={"transparent"}
                   rightIcon={
                     <Image src={ArrowRightWhite.src} alt={"Arrow Right"} />
                   }

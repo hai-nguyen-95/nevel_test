@@ -2,7 +2,6 @@ export const TabsTheme = {
   variants: {
     sidebar: {
       tab: {
-        padding: "21px",
         flex: 1,
         opacity: 0.2,
         borderBottom: {base: "1px solid #000", md: "unset"},

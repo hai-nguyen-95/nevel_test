@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 
 const pingfangsc = localFont({
-  src: "../assets/fonts/PingFangSC.ttf",
+  src: "../assets/fonts/PingFang-SC-Regular.woff",
   variable: "--font-pingfangsc",
   weight: "100 900",
 });

@@ -15,101 +15,103 @@ const Sidebar = () => {
   const { md }: any = useBreakpoint();
 
   return (
-    <Box width={{ base: "full", md: "120px" }}>
-      <Tabs borderColor={"transparent"} variant={"sidebar"}>
-        <TabList display={"flex"} flexDirection={{ base: "row", md: "column" }}>
-          <Tab
-            display={{ base: "none", md: "unset" }}
-            borderBottom={"1px solid"}
-            _selected={{
-              opacity: 1,
-              borderBottom: "1px solid rgba(0,0,0,0.2)",
-            }}
+    <Tabs borderColor={"transparent"} variant={"sidebar"}>
+      <TabList
+        width={{ base: "full", md: "160px" }}
+        display={"flex"}
+        flexDirection={{ base: "row", md: "column" }}
+        rowGap={"15px"}
+      >
+        {/* SEARCH MD */}
+        <Tab
+          padding={{ base: "21px", md: "0 0 21px 0" }}
+          borderBottom={"1px solid"}
+          display={{ base: "none", md: "flex" }}
+          flexDirection={"row"}
+          justifyContent={"flex-start"}
+          alignItems={"center"}
+          gap={"5px"}
+          _selected={{
+            opacity: 1,
+            borderBottom: "1px solid rgba(0,0,0,0.2)",
+          }}
+        >
+          <Image src={SEARCH.src} alt={SEARCH.name} />
+          <Text
+            fontSize={"15.5px"}
+            fontWeight={600}
+            lineHeight={"20px"}
+            textTransform={"uppercase"}
           >
-            <Box
-              display={"flex"}
-              flexDirection={"column"}
+            {SEARCH.name}
+          </Text>
+        </Tab>
+
+        {/* GAME HOMES, TIMELINE, ALL GAMES */}
+        {SIDEBAR_LIST?.length > 0 &&
+          SIDEBAR_LIST.map((item: DataProps, index: number) => (
+            <Tab
+              key={index}
+              padding={{ base: "21px", md: "5px 0" }}
+              flexDirection={{ base: "column", md: "row" }}
+              justifyContent={{ base: "center", md: "flex-start" }}
               alignItems={"center"}
-              rowGap={"6px"}
+              gap={"6px 5px"}
             >
-              <Image src={SEARCH.src} alt={SEARCH.name} />
+              <Image src={item.src} alt={item.name} />
               <Text
-                fontSize={"10px"}
+                fontSize={{ base: "10px", md: "15.5px" }}
                 fontWeight={600}
-                lineHeight={"10px"}
+                lineHeight={{ base: "10px", md: "20px" }}
                 textTransform={"uppercase"}
               >
-                {SEARCH.name}
+                {md ? item.fullName || item.name : item.name}
               </Text>
-            </Box>
-          </Tab>
-          {SIDEBAR_LIST?.length > 0 &&
-            SIDEBAR_LIST.map((item: DataProps, index: number) => (
-              <Tab key={index}>
-                <Box
-                  display={"flex"}
-                  flexDirection={"column"}
-                  alignItems={"center"}
-                  rowGap={"6px"}
-                >
-                  <Image src={item.src} alt={item.name} />
-                  <Text
-                    fontSize={"10px"}
-                    fontWeight={600}
-                    lineHeight={"10px"}
-                    textTransform={"uppercase"}
-                  >
-                    {md ? item.fullName || item.name : item.name}
-                  </Text>
-                </Box>
-              </Tab>
-            ))}
-          <Tab display={{ base: "unset", md: "none" }}>
-            <Box
-              display={"flex"}
-              flexDirection={"column"}
-              alignItems={"center"}
-              rowGap={"6px"}
-            >
-              <Image src={SEARCH.src} alt={SEARCH.name} />
-              <Text
-                fontSize={"10px"}
-                fontWeight={600}
-                lineHeight={"10px"}
-                textTransform={"uppercase"}
-              >
-                {SEARCH.name}
-              </Text>
-            </Box>
-          </Tab>
-          <Tab
-            display={{ base: "unset", md: "none" }}
-            borderLeft={"1px solid"}
-            _selected={{
-              opacity: 1,
-              borderLeft: "1px solid rgba(0,0,0,0.2)",
-            }}
+            </Tab>
+          ))}
+
+        {/* SEARCH MOBILE */}
+        <Tab
+          display={{ base: "flex", md: "none" }}
+          flexDirection={"column"}
+          alignItems={"center"}
+          rowGap={"6px"}
+        >
+          <Image src={SEARCH.src} alt={SEARCH.name} />
+          <Text
+            fontSize={"10px"}
+            fontWeight={600}
+            lineHeight={"10px"}
+            textTransform={"uppercase"}
           >
-            <Box
-              display={"flex"}
-              flexDirection={"column"}
-              alignItems={"center"}
-              rowGap={"6px"}
-            >
-              <Image src={FILTER.src} alt={FILTER.name} />
-              <Text
-                fontSize={"10px"}
-                fontWeight={600}
-                lineHeight={"10px"}
-                textTransform={"uppercase"}
-              >
-                {FILTER.name}
-              </Text>
-            </Box>
-          </Tab>
-        </TabList>
-      </Tabs>
-    </Box>
+            {SEARCH.name}
+          </Text>
+        </Tab>
+
+        {/* FILTER MOBILE */}
+        <Tab
+          display={{ base: "flex", md: "none" }}
+          borderLeft={"1px solid"}
+          flexDirection={"column"}
+          alignItems={"center"}
+          rowGap={"6px"}
+          _selected={{
+            opacity: 1,
+            borderLeft: "1px solid rgba(0,0,0,0.2)",
+          }}
+        >
+          <Image src={FILTER.src} alt={FILTER.name} />
+          <Text
+            fontSize={"10px"}
+            fontWeight={600}
+            lineHeight={"10px"}
+            textTransform={"uppercase"}
+          >
+            {FILTER.name}
+          </Text>
+        </Tab>
+      </TabList>
+    </Tabs>
   );
 };
 

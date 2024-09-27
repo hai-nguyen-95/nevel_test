@@ -59,7 +59,7 @@ const Footer = () => {
         >
           {/* WEB MAP */}
           <Box
-            padding={"30px 0"}
+            padding={{base: "30px 0", md: 0}}
             borderBottom={{
               base: "1px solid rgba(0, 0, 0, 0.06)",
               md: "unset",
@@ -92,7 +92,7 @@ const Footer = () => {
 
           {/* ABOUT US*/}
           <Box
-            padding={"30px 0"}
+            padding={{base: "30px 0", md: 0}}
             borderBottom={{
               base: "1px solid rgba(0, 0, 0, 0.06)",
               md: "unset",
@@ -125,7 +125,7 @@ const Footer = () => {
 
           {/* EVENTS*/}
           <Box
-            padding={"30px 0"}
+            padding={{base: "30px 0", md: 0}}
             borderBottom={{
               base: "1px solid rgba(0, 0, 0, 0.06)",
               md: "unset",
@@ -158,7 +158,7 @@ const Footer = () => {
 
           {/* OUR PARTNERS*/}
           <Box
-            padding={"30px 0"}
+            padding={{base: "30px 0", md: 0}}
             borderBottom={{
               base: "1px solid rgba(0, 0, 0, 0.06)",
               md: "unset",
@@ -225,6 +225,7 @@ const Footer = () => {
       </Box>
       <Box
         display={{ base: "none", md: "block" }}
+        marginTop={"50px"}
         paddingTop={"40px"}
         borderTop={"1px solid rgba(0, 0, 0, 0.1)"}
       >
