@@ -5,6 +5,7 @@ export const TextTheme = {
       fontSize: "16px",
       color: "#000",
       fontWeight: "normal",
+      textAlign: "start"
     },
   },
 

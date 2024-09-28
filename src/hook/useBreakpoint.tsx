@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { breakpoints } from "@/theme/break-points.theme";
+import { BreakpointType } from "@/interfaces";
 
 const useBreakpoint = () => {
   const sizeName = Object.keys(breakpoints);
   const sizeValue = Object.values(breakpoints);
-  const [breakpoint, setBreakPoint] = useState({
+  const [breakpoint, setBreakPoint] = useState<BreakpointType>({
     xs: false,
     sm: false,
     md: false,
@@ -33,7 +34,7 @@ const useBreakpoint = () => {
       handleResize();
 
       let n = 0;
-      const temp: any = { ...breakpoint };
+      const temp: BreakpointType = { ...breakpoint };
       while (!!sizeName[n + 1]) {
         if (sizeValue[n] <= windowSize.width) {
           temp[sizeName[n]] = true;
@@ -45,7 +46,7 @@ const useBreakpoint = () => {
 
       setBreakPoint(temp);
       return () => window.removeEventListener("resize", handleResize);
-    }, [windowSize.width]);
+    }, [windowSize?.width]);
   }
   return breakpoint;
 };

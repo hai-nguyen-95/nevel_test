@@ -1,23 +1,19 @@
-import { Box, Image, Text, Tabs, TabList, Tab } from "@chakra-ui/react";
+import { Image, Text, Tabs, TabList, Tab } from "@chakra-ui/react";
 
 import useBreakpoint from "@/hook/useBreakpoint";
 
 import { SIDEBAR_LIST, SEARCH, FILTER } from "@/constants";
 
-interface DataProps {
-  id: number;
-  name: string;
-  fullName?: string;
-  src: string;
-}
+import { SideBarProps } from "@/interfaces"
+
+import { BreakpointType } from "@/interfaces";
 
 const Sidebar = () => {
-  const { md }: any = useBreakpoint();
+  const { md }: BreakpointType = useBreakpoint();
 
   return (
     <Tabs borderColor={"transparent"} variant={"sidebar"}>
       <TabList
-        width={{ base: "full", md: "160px" }}
         display={"flex"}
         flexDirection={{ base: "row", md: "column" }}
         rowGap={"15px"}
@@ -49,7 +45,7 @@ const Sidebar = () => {
 
         {/* GAME HOMES, TIMELINE, ALL GAMES */}
         {SIDEBAR_LIST?.length > 0 &&
-          SIDEBAR_LIST.map((item: DataProps, index: number) => (
+          SIDEBAR_LIST.map((item: SideBarProps, index: number) => (
             <Tab
               key={index}
               padding={{ base: "21px", md: "5px 0" }}

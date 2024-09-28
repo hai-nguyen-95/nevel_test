@@ -11,8 +11,10 @@ import { ROUTER_LIST, ABOUT_US, EVENTS, OUR_PARTNERS } from "@/constants";
 
 import useBreakpoint from "@/hook/useBreakpoint";
 
+import { BreakpointType } from "@/interfaces";
+
 const Footer = () => {
-  const { md }: any = useBreakpoint();
+  const { md }: BreakpointType = useBreakpoint();
   const [isShowWebMap, setIsShowWebMap] = useState<boolean>(false);
   const [isShowAboutUs, setIsShowAboutUs] = useState<boolean>(false);
   const [isShowEvents, setIsShowEvents] = useState<boolean>(false);
@@ -190,6 +192,7 @@ const Footer = () => {
           </Box>
         </Box>
 
+        {/* COMPANY INFO */}
         <Box mt={{ base: "51px", md: "unset" }}>
           <Image
             display={{ base: "none", md: "block" }}
@@ -223,6 +226,8 @@ const Footer = () => {
           </Box>
         </Box>
       </Box>
+
+      {/* COPYRIGHT MD */}
       <Box
         display={{ base: "none", md: "block" }}
         marginTop={"50px"}

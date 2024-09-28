@@ -15,8 +15,8 @@ export { default as TwitterSolidBlue } from "./twitter-solid-blue.svg";
 export { default as YoutubeSolidRed } from "./youtube-solid-red.svg";
 export { default as LogoGray } from "./logo-gray.svg";
 
-export { default as DoubleRoundWhite } from "./double-round-white.svg";
 export { default as MusicNoteWhite } from "./music-note-white.svg";
 export { default as PokerWhite } from "./poker-white.svg";
 export { default as ArrowRightWhite } from "./arrow-right-white.svg";
 export { default as ChevronDownBlack } from "./chevron-down-black.svg";
+export { default as ChevronRightBlack } from "./chevron-right-black.svg";

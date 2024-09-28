@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${pingfangsc.variable}`}>
+      <body className={`${pingfangsc.variable}`} suppressHydrationWarning={true}>
         {children}
       </body>
     </html>

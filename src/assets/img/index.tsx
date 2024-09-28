@@ -6,3 +6,8 @@ export { default as TreeOfFortune } from "./tree-of-fortune.jpg";
 export { default as MahjongWaysSquare } from "./mahjong-ways-square.jpg";
 export { default as TreeOfFortuneSquare } from "./tree-of-fortune-square.jpg";
 export { default as WildBanditoSquare } from "./wild-bandito-square.jpg";
+export { default as ChinaSquare } from "./china-square.jpg";
+export { default as GoldSquare } from "./gold-square.jpg";
+export { default as HipHopPandaSquare } from "./hiphop-panda-square.jpg";
+export { default as RockPaperScissorsSquare } from "./rock-paper-scissors-square.jpg";
+export { default as PokerSquare } from "./poker-square.jpg";

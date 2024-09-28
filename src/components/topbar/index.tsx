@@ -42,6 +42,8 @@ const Topbar = () => {
           width={{ base: "53px", md: "109px" }}
           height={{ base: "31px", md: "64px" }}
         />
+
+        {/* MENU MD */}
         <Tabs
           display={{ base: "none", md: "unset" }}
           borderColor={"transparent"}
@@ -69,6 +71,8 @@ const Topbar = () => {
               ))}
           </TabList>
         </Tabs>
+
+        {/* MENU MOBILE */}
         <Box display={{ base: "unset", md: "none" }}>
           <Menu>
             <MenuButton

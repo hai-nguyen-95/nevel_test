@@ -1,17 +1,7 @@
-import { Box, Image, Text, Button } from "@chakra-ui/react";
+import { Box, Image, Text } from "@chakra-ui/react";
+import { HotGameProps } from "@/interfaces"
 
-interface DataProps {
-  id: number;
-  name: string;
-  desc: string;
-  src: string;
-  squareSrc: string;
-  volatility: string;
-  rpt: string;
-  maximumWin: string;
-}
-
-const HotGameSectionMB = ({ data }: { data: DataProps }) => {
+const HotGameSectionMB = ({ data }: { data: HotGameProps }) => {
   return (
     <Box
       margin={"auto"}
@@ -19,7 +9,7 @@ const HotGameSectionMB = ({ data }: { data: DataProps }) => {
       backgroundColor={"#C48F03"}
       borderRadius={"16px"}
     >
-      <Image borderRadius={"16px 16px 0 0"} src={data.src} alt={data.name} />
+      <Image width={"308px"} height={"180px"} borderRadius={"16px 16px 0 0"} src={data.src} alt={data.name} />
       <Box
         padding={"20px"}
         display={"flex"}
@@ -42,6 +32,7 @@ const HotGameSectionMB = ({ data }: { data: DataProps }) => {
             lineHeight={"14px"}
             color={"#fff"}
             opacity={0.5}
+            noOfLines={2}
           >
             {data.desc}
           </Text>

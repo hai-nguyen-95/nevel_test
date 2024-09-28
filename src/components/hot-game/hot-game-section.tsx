@@ -1,17 +1,10 @@
 import { Box, Image, Text, Button } from "@chakra-ui/react";
+import { HotGameProps } from "@/interfaces"
 
-interface DataProps {
-  id: number;
-  name: string;
-  desc: string;
-  src: string;
-  squareSrc: string;
-}
-
-const HotGameSection = ({ data }: { data: DataProps }) => {
+const HotGameSection = ({ data }: { data: HotGameProps }) => {
   return (
     <Box width={"490px"}>
-      <Image src={data.src} alt={data.name} />
+      <Image width={"490px"} height={"221.41px"} src={data.src} alt={data.name} />
       <Box
         mt={"30px"}
         display={"flex"}
@@ -28,6 +21,7 @@ const HotGameSection = ({ data }: { data: DataProps }) => {
             width={"270px"}
             fontSize={"13.672px"}
             lineHeight={"18px"}
+            noOfLines={2}
           >
             {data.desc}
           </Text>
