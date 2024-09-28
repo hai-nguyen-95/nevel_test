@@ -31,7 +31,7 @@ const Topbar = () => {
       <Box
         margin={"auto"}
         padding={"14px 17px"}
-        maxWidth={"1440px"}
+        maxWidth={"1240px"}
         display={"flex"}
         justifyContent={"space-between"}
         alignItems={"center"}

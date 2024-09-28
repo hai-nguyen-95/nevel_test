@@ -106,6 +106,7 @@ const HotGame = () => {
               py={0}
               border={"1px solid rgba(0, 0, 0, 0.2)"}
               borderRadius={"2px"}
+              zIndex={9}
             >
               {RELEASE_DATE_FILTER?.length > 0 &&
                 RELEASE_DATE_FILTER.map((item: string) => (

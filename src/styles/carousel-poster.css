@@ -8,6 +8,12 @@
   justify-content: flex-start;
 }
 
+.poster-swiper-screen-lg .swiper-pagination {
+  left: 7%;
+  bottom: 22px;
+  justify-content: flex-start;
+}
+
 .poster-swiper.swiper {
   max-width: 1440px;
 }

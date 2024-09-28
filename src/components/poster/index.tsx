@@ -19,7 +19,7 @@ import useBreakpoint from "@/hook/useBreakpoint";
 import { BreakpointType } from "@/interfaces";
 
 const Poster = ({ data }: { data: PosterProps[] }) => {
-  const { md }: BreakpointType = useBreakpoint();
+  const { md, lg }: BreakpointType = useBreakpoint();
 
   const pagination = {
     clickable: true,
@@ -34,7 +34,11 @@ const Poster = ({ data }: { data: PosterProps[] }) => {
   return (
     <Swiper
       className={`poster-swiper ${
-        md ? "poster-swiper-screen-md" : "poster-swiper-screen-mb"
+        lg
+          ? "poster-swiper-screen-lg"
+          : md
+          ? "poster-swiper-screen-md"
+          : "poster-swiper-screen-mb"
       }`}
       modules={[Pagination, Virtual]}
       pagination={pagination}

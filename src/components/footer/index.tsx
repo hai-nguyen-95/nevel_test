@@ -44,7 +44,7 @@ const Footer = () => {
   return (
     <Box
       margin={"auto"}
-      maxWidth={"1440px"}
+      maxWidth={"1240px"}
       padding={{ base: "unset", md: "101px 25px" }}
     >
       <Box

@@ -60,6 +60,7 @@ const Sidebar = () => {
                 fontWeight={600}
                 lineHeight={{ base: "10px", md: "20px" }}
                 textTransform={"uppercase"}
+                textAlign={"center"}
               >
                 {md ? item.fullName || item.name : item.name}
               </Text>
